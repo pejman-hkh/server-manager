@@ -15,6 +15,8 @@ function extractFile {
 			tar -xvzf $1
 		elif [ $extension = "zip" ]; then
 			unzip $1
+		elif [ $extension = "bz2" ]; then
+			tar -xjvf $1
 		elif [ $extension = "xz" ]; then
 			tar -xf $1
 		else
