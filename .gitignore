@@ -2,3 +2,5 @@
 !*/*.sh
 !conf/*
 !conf/*/*
+!*/conf
+!*/conf/*

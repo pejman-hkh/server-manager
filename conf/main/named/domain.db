@@ -1,0 +1,26 @@
+$TTL 3600
+@       IN      SOA     $ns1.      hostmaster.$domain. (
+                                                2022101300
+                                                3600
+                                                3600
+                                                1209600
+                                                86400 )
+
+$domain.	3600	IN	NS	$ns1.
+$domain.	3600	IN	NS	$ns2.
+
+film	3600	IN	A	$ip
+ftp	3600	IN	A	$ip
+mail	3600	IN	A	$ip
+$domain.	3600	IN	A	$ip
+pop	3600	IN	A	$ip
+smtp	3600	IN	A	$ip
+www	3600	IN	A	$ip
+
+$domain.	3600	IN	MX	10 mail
+$domain.	3600	IN	TXT	"v=spf1 a mx ip4:$ip ~all"
+
+
+
+
+
